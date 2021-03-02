@@ -1,0 +1,1 @@
+const fontInput = "Font Size";
