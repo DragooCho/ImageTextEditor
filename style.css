@@ -3,6 +3,18 @@ body {
   margin: 0;
   padding: 0;
 }
-canvas {
-  display: block;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* canvas {
+  display: flex;
+  margin-top: 3em;
+} */
+/* 
+button {
+  display: flex;
+} */

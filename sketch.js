@@ -1,25 +1,47 @@
-let canvas;
-let img;
+let img, input, button;
 
 function setup() {
-  canvas = createCanvas(300, 300);
-  canvas.drop(gotFile);
-  canvas.mousePressed(inputTextPaint);
-  background(180, 0, 180);
+  let c = createCanvas(500, 500);
+  background(200);
+  textAlign(CENTER);
+  text(
+    "이미지 파일을 먼저 가지고 오십시오.그런 다음 원하는 위치에 마우스를 클릭하세요.",
+    width / 2,
+    height / 2
+  );
+
+  c.drop(gotFile);
+
+  input = createInput();
+  // input.position(300, 550);
+
+  button = createButton("다운로드");
+  // button.position(19, 550);
+  button.mousePressed(imgDownload);
+}
+
+function draw() {
+  if (img) {
+    image(img, 0, 0, width, height);
+  }
+
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text(input.value(), mouseX, mouseY);
 }
 
 function gotFile(file) {
-  img = loadImage(file.data, imageView);
+  img = createImg(file.data, "").hide();
 }
 
-function imageView() {
-  canvas.resize(img.width, img.height);
-  image(img, 0, 0, width, height);
+function mousePressed() {
+  loop();
 }
 
-function inputTextPaint() {
-  textSize(fontSizeEvent); // 사이즈 조절
-  textAlign(CENTER, CENTER);
-  textStyle(BOLDITALIC); // 스타일 지정, NORMAL, ITALIC, BOLD, BOLDITALIC 를 설정 가능
-  text(inputTextEvent, mouseX, mouseY); // 폰트의 내용, 해당 마우스 위치에 그려준다.
+function mouseReleased() {
+  noLoop();
+}
+
+function imgDownload(c) {
+  saveCanvas(c, "jpg", "jpg");
 }
