@@ -13,10 +13,7 @@ function setup() {
   c.drop(gotFile);
 
   input = createInput();
-  // input.position(300, 550);
-
   button = createButton("다운로드");
-  // button.position(19, 550);
   button.mousePressed(imgDownload);
 }
 
@@ -27,6 +24,7 @@ function draw() {
 
   textSize(32);
   textAlign(CENTER, CENTER);
+  textStyle(ITALIC);
   text(input.value(), mouseX, mouseY);
 }
 
@@ -42,6 +40,6 @@ function mouseReleased() {
   noLoop();
 }
 
-function imgDownload(c) {
-  saveCanvas(c, "jpg", "jpg");
+function imgDownload(can) {
+  saveCanvas(can, "jpg");
 }

@@ -8,12 +8,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-/* canvas {
+canvas {
   display: flex;
   margin-top: 3em;
-} */
+  border-radius: 10px;
+}
 /* 
 button {
   display: flex;
