@@ -12,10 +12,13 @@ body {
 }
 
 canvas {
-  display: flex;
   margin-top: 3em;
   border-radius: 10px;
 }
+
+#rightSide {
+}
+
 /* 
 button {
   display: flex;

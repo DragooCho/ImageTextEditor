@@ -1,4 +1,11 @@
-let img, input, button, textSizeSlider, dropdown, greeting, sizeGreeting;
+let img,
+  input,
+  button,
+  savebutton,
+  textSizeSlider,
+  dropdown,
+  greeting,
+  sizeGreeting;
 
 function preload() {
   MaplestoryOTFBold = loadFont(
@@ -21,6 +28,7 @@ function preload() {
 function setup() {
   // Original Canvas Wallpaper
   let canvas = createCanvas(500, 500);
+  canvas.id("leftSide");
   background(200);
 
   // Canvas Wallpaper Information
@@ -38,26 +46,29 @@ function setup() {
     height / 2 + 80
   );
 
-  createElement("h1", "-웹툴- 이미지 텍스트 편집기");
+  createDiv("<h1 id=rightSide>-웹툴- 이미지 텍스트 편집기</h1>");
 
   // Set drop handle Zone
   canvas.drop(gotFile);
 
   // Set flieupload button
-  greeting = createElement("h3", "사용할 이미지 선택");
+  createDiv("<h3 id=rightSide>사용할 이미지 선택</h3>");
   input = createFileInput(gotFile);
+  input.id("rightSide");
 
   // Set Text Input Window
-  greeting = createElement("h3", "문구");
+  greeting = createDiv("<h3 id=rightSide>문구</h3>");
   input = createInput();
+  input.id("rightSide");
 
   // Set TextSize Value Slider
-  sizeGreeting = createElement("h3", "폰트 사이즈 30");
-  textSizeSlider = createSlider(10, 55, 30);
+  sizeGreeting = createDiv("<h3 id=rightSide>폰트 사이즈 30</h3>");
+  textSizeSlider = createSlider(10, 70, 30);
   textSizeSlider.mouseMoved(textSizeChange);
+  textSizeSlider.id("rightSide");
 
   // Set textColor Value options
-  greeting = createElement("h3", "글씨색");
+  greeting = createDiv("<h3 id=rightSide>글씨색</h3>");
   colorDropdown = createSelect();
   colorDropdown.option("white");
   colorDropdown.option("orange");
@@ -66,21 +77,26 @@ function setup() {
   colorDropdown.option("pink");
   colorDropdown.option("black");
   colorDropdown.class("colorDropdown");
+  colorDropdown.id("rightSide");
 
   // Set textType options
-  greeting = createElement("h3", "폰트 타입 선택");
+  greeting = createDiv("<h3 id=rightSide>폰트 타입 선택</h3>");
   fontTypeDropdown = createSelect();
   fontTypeDropdown.option("SDSamliphopangche_Outline");
   fontTypeDropdown.option("MaplestoryOTFBold");
   fontTypeDropdown.option("Cafe24Ohsquare");
   fontTypeDropdown.option("TmoneyRoundWindExtraBold");
   fontTypeDropdown.option("BMEULJIRO");
-  fontTypeDropdown.class("fontTypeDropdown");
+  fontTypeDropdown.id("rightSide");
 
   // Set Image Download button
-  greeting = createElement("h3", "이 버튼을 눌러 다른 이름으로 저장");
-  button = createButton("만들기");
-  button.mousePressed(imgDownload);
+  greeting = createDiv(
+    "<h2 id=rightSide>이 버튼을 눌러 다른 이름으로 저장</h2>"
+  );
+  savebutton = createButton("만들기");
+  savebutton.mousePressed(imgDownload);
+  savebutton.class("savebutton");
+  savebutton.id("rightSide");
 }
 
 function draw() {
@@ -89,10 +105,12 @@ function draw() {
   const fontTypeValue = fontTypeDropdown.value();
   const inputWindowText = input.value();
 
+  // Attach image
   if (img) {
     image(img, 0, 0, width, height);
   }
 
+  // textpaint handler
   fill(fontColorValue);
   textAlign(CENTER, CENTER);
   textFont(fontTypeValue, fontSizeValue);
@@ -115,7 +133,7 @@ function mouseReleased() {
   noLoop();
 }
 
-function imgDownload(neme) {
-  saveCanvas(neme, "jpg");
+function imgDownload(name) {
+  saveCanvas(name, "jpg");
   console.log(fontTypeDropdown.value());
 }
