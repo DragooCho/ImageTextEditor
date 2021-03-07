@@ -5,6 +5,7 @@ let img,
   textSizeSlider,
   dropdown,
   greeting,
+  bigTitleGreeting,
   sizeGreeting;
 
 function preload() {
@@ -29,7 +30,7 @@ function setup() {
   // Original Canvas Wallpaper
   let canvas = createCanvas(500, 500);
   canvas.id("leftSide");
-  background(200);
+  background(300);
 
   // Canvas Wallpaper Information
   textAlign(CENTER);
@@ -46,57 +47,63 @@ function setup() {
     height / 2 + 80
   );
 
-  createDiv("<h1 id=rightSide>-웹툴- 이미지 텍스트 편집기</h1>");
+  // Set Big Title
+  bigTitleGreeting = createDiv(
+    "<h1 id=rightSide>-웹툴- 이미지 텍스트 편집기</h1>"
+  );
+  bigTitleGreeting.class("bigTitle");
 
   // Set drop handle Zone
   canvas.drop(gotFile);
 
   // Set flieupload button
-  createDiv("<h3 id=rightSide>사용할 이미지 선택</h3>");
+  middleTitleGreeting = createDiv("<h3 id=rightSide>사용할 이미지 선택</h3>");
+  middleTitleGreeting.class("middleTitle");
   input = createFileInput(gotFile);
-  input.id("rightSide");
+  input.class("imageUploadButton");
 
   // Set Text Input Window
-  greeting = createDiv("<h3 id=rightSide>문구</h3>");
+  middleTitleGreeting = createDiv("<h3 id=rightSide>문구</h3>");
+  middleTitleGreeting.class("middleTitlePhrases");
   input = createInput();
-  input.id("rightSide");
 
   // Set TextSize Value Slider
   sizeGreeting = createDiv("<h3 id=rightSide>폰트 사이즈 30</h3>");
+  sizeGreeting.class("fontSizeHandle");
   textSizeSlider = createSlider(10, 70, 30);
+  textSizeSlider.class("textSizeSlider");
   textSizeSlider.mouseMoved(textSizeChange);
-  textSizeSlider.id("rightSide");
 
   // Set textColor Value options
   greeting = createDiv("<h3 id=rightSide>글씨색</h3>");
+  greeting.class("midTitleColor");
   colorDropdown = createSelect();
+  colorDropdown.option("black");
   colorDropdown.option("white");
   colorDropdown.option("orange");
   colorDropdown.option("green");
   colorDropdown.option("skyblue");
   colorDropdown.option("pink");
-  colorDropdown.option("black");
   colorDropdown.class("colorDropdown");
-  colorDropdown.id("rightSide");
 
   // Set textType options
   greeting = createDiv("<h3 id=rightSide>폰트 타입 선택</h3>");
+  greeting.class("midTitleFontType");
   fontTypeDropdown = createSelect();
   fontTypeDropdown.option("SDSamliphopangche_Outline");
   fontTypeDropdown.option("MaplestoryOTFBold");
   fontTypeDropdown.option("Cafe24Ohsquare");
   fontTypeDropdown.option("TmoneyRoundWindExtraBold");
   fontTypeDropdown.option("BMEULJIRO");
-  fontTypeDropdown.id("rightSide");
 
   // Set Image Download button
   greeting = createDiv(
     "<h2 id=rightSide>이 버튼을 눌러 다른 이름으로 저장</h2>"
   );
+  greeting.class("middleTitleSaveAs");
   savebutton = createButton("만들기");
   savebutton.mousePressed(imgDownload);
   savebutton.class("savebutton");
-  savebutton.id("rightSide");
 }
 
 function draw() {
@@ -118,6 +125,7 @@ function draw() {
 }
 
 function textSizeChange() {
+  textStyle(ITALIC);
   const sizeChange = textSizeSlider.value();
   sizeGreeting.html("폰트 사이즈 " + sizeChange);
 }
