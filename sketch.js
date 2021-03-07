@@ -125,7 +125,6 @@ function draw() {
 }
 
 function textSizeChange() {
-  textStyle(ITALIC);
   const sizeChange = textSizeSlider.value();
   sizeGreeting.html("폰트 사이즈 " + sizeChange);
 }
