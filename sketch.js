@@ -103,6 +103,7 @@ function setup() {
   greeting.class("middleTitleSaveAs");
   savebutton = createButton("만들기");
   savebutton.mousePressed(imgDownload);
+  // savebutton = textFont(SDSamliphopangche_Outline);
   savebutton.class("savebutton");
 }
 
@@ -131,16 +132,19 @@ function textSizeChange() {
 
 function gotFile(file) {
   img = createImg(file.data, "").hide();
+  loop();
 }
 
 function mousePressed() {
-  loop();
+  if (mouseX < 500 && mouseX > 0 && mouseY < 500 && mouseY > 500) {
+    console.log("click");
+    loop();
+  }
 }
 function mouseReleased() {
   noLoop();
 }
 
 function imgDownload(name) {
-  saveCanvas(name, "jpg");
-  console.log(fontTypeDropdown.value());
+  saveCanvas(name, "png");
 }
