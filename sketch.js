@@ -48,9 +48,7 @@ function setup() {
   );
 
   // Set Big Title
-  bigTitleGreeting = createDiv(
-    "<h1 id=rightSide>-웹툴- 이미지 텍스트 편집기</h1>"
-  );
+  bigTitleGreeting = createDiv("<h1>🔹웹툴🔹이미지 텍스트 편집기 ver2️⃣</h1>");
   bigTitleGreeting.class("bigTitle");
 
   // Set drop handle Zone
@@ -72,7 +70,6 @@ function setup() {
   sizeGreeting.class("fontSizeHandle");
   textSizeSlider = createSlider(10, 70, 30);
   textSizeSlider.class("textSizeSlider");
-  textSizeSlider.mouseMoved(textSizeChange);
 
   // Set textColor Value options
   greeting = createDiv("<h3 id=rightSide>글씨색</h3>");
@@ -103,7 +100,6 @@ function setup() {
   greeting.class("middleTitleSaveAs");
   savebutton = createButton("만들기");
   savebutton.mousePressed(imgDownload);
-  // savebutton = textFont(SDSamliphopangche_Outline);
   savebutton.class("savebutton");
 }
 
@@ -123,6 +119,9 @@ function draw() {
   textAlign(CENTER, CENTER);
   textFont(fontTypeValue, fontSizeValue);
   text(inputWindowText, mouseX, mouseY);
+
+  // Set TextSize Slide Handler
+  textSizeSlider.mouseMoved(textSizeChange);
 }
 
 function textSizeChange() {
@@ -136,8 +135,8 @@ function gotFile(file) {
 }
 
 function mousePressed() {
-  if (mouseX < 500 && mouseX > 0 && mouseY < 500 && mouseY > 500) {
-    console.log("click");
+  if (mouseX < 500 && mouseX > 0 && mouseY < 500 && mouseY > 0) {
+    console.log(mouseX, mouseY);
     loop();
   }
 }
