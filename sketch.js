@@ -1,12 +1,13 @@
 let img,
   input,
+  textInput,
   button,
   savebutton,
   textSizeSlider,
   dropdown,
   greeting,
-  bigTitleGreeting,
-  sizeGreeting;
+  sizeGreeting,
+  bigTitleGreeting;
 
 function preload() {
   MaplestoryOTFBold = loadFont(
@@ -35,16 +36,20 @@ function setup() {
   // Canvas Wallpaper Information
   textAlign(CENTER);
   textFont(SDSamliphopangche_Outline, 20);
-  text("먼저 이미지 파일을 드롭 또는 파일선택을 눌러", width / 2, height / 2);
+  text(
+    "먼저 이미지 파일을 드롭 또는 파일선택을 눌러",
+    width / 2,
+    height / 2 - 40
+  );
   textAlign(CENTER);
   textFont(SDSamliphopangche_Outline, 20);
-  text("이미지 파일을 선택하세요.", width / 2, height / 2 + 40);
+  text("이미지 파일을 선택하세요.", width / 2, height / 2 - 0);
   textAlign(CENTER);
   textFont(SDSamliphopangche_Outline, 20);
   text(
     "그런 다음 아래의 옵션으로 텍스트를 조절하세요.",
     width / 2,
-    height / 2 + 80
+    height / 2 + 40
   );
 
   // Set Big Title
@@ -63,10 +68,10 @@ function setup() {
   // Set Text Input Window
   middleTitleGreeting = createDiv("<h3 id=rightSide>문구</h3>");
   middleTitleGreeting.class("middleTitlePhrases");
-  input = createInput();
+  textInput = createInput();
 
   // Set TextSize Value Slider
-  sizeGreeting = createDiv("<h3 id=rightSide>폰트 사이즈 30</h3>");
+  sizeGreeting = createDiv("폰트 사이즈 30");
   sizeGreeting.class("fontSizeHandle");
   textSizeSlider = createSlider(10, 70, 30);
   textSizeSlider.class("textSizeSlider");
@@ -107,26 +112,30 @@ function draw() {
   const fontColorValue = colorDropdown.value();
   const fontSizeValue = textSizeSlider.value();
   const fontTypeValue = fontTypeDropdown.value();
-  const inputWindowText = input.value();
+  const inputWindowText = textInput.value();
 
   // Attach image
   if (img) {
     image(img, 0, 0, width, height);
   }
 
-  // textpaint handler
+  // Set TextInput Handler
+  textInput.input(myInputEvent);
+
+  // Set TextSize Slide Handler
+  textSizeSlider.input(textSizeChange);
+
+  // Set textPaint handler
   fill(fontColorValue);
   textAlign(CENTER, CENTER);
   textFont(fontTypeValue, fontSizeValue);
   text(inputWindowText, mouseX, mouseY);
-
-  // Set TextSize Slide Handler
-  textSizeSlider.mouseMoved(textSizeChange);
 }
 
 function textSizeChange() {
   const sizeChange = textSizeSlider.value();
   sizeGreeting.html("폰트 사이즈 " + sizeChange);
+  loop();
 }
 
 function gotFile(file) {
@@ -134,9 +143,12 @@ function gotFile(file) {
   loop();
 }
 
+function myInputEvent() {
+  loop();
+}
+
 function mousePressed() {
   if (mouseX < 500 && mouseX > 0 && mouseY < 500 && mouseY > 0) {
-    console.log(mouseX, mouseY);
     loop();
   }
 }
