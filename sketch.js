@@ -31,7 +31,7 @@ function setup() {
   // Original Canvas Wallpaper
   let canvas = createCanvas(500, 500);
   canvas.id("leftSide");
-  background(300);
+  background(220);
 
   // Canvas Wallpaper Information
   textAlign(CENTER);
@@ -60,24 +60,24 @@ function setup() {
   canvas.drop(gotFile);
 
   // Set flieupload button
-  middleTitleGreeting = createDiv("<h3 id=rightSide>사용할 이미지 선택</h3>");
+  middleTitleGreeting = createDiv("<h3 id=titleSide>사용할 이미지 선택</h3>");
   middleTitleGreeting.class("middleTitle");
   input = createFileInput(gotFile);
   input.class("imageUploadButton");
 
   // Set Text Input Window
-  middleTitleGreeting = createDiv("<h3 id=rightSide>문구</h3>");
+  middleTitleGreeting = createDiv("<h3 id=titleSide>문구</h3>");
   middleTitleGreeting.class("middleTitlePhrases");
   textInput = createInput();
 
   // Set TextSize Value Slider
   sizeGreeting = createDiv("폰트 사이즈 30");
   sizeGreeting.class("fontSizeHandle");
-  textSizeSlider = createSlider(10, 70, 30);
+  textSizeSlider = createSlider(10, 100, 30);
   textSizeSlider.class("textSizeSlider");
 
   // Set textColor Value options
-  greeting = createDiv("<h3 id=rightSide>글씨색</h3>");
+  greeting = createDiv("<h3 id=titleSide>글씨색</h3>");
   greeting.class("midTitleColor");
   colorDropdown = createSelect();
   colorDropdown.option("black");
@@ -89,7 +89,7 @@ function setup() {
   colorDropdown.class("colorDropdown");
 
   // Set textType options
-  greeting = createDiv("<h3 id=rightSide>폰트 타입 선택</h3>");
+  greeting = createDiv("<h3 id=titleSide>폰트 타입 선택</h3>");
   greeting.class("midTitleFontType");
   fontTypeDropdown = createSelect();
   fontTypeDropdown.option("SDSamliphopangche_Outline");
@@ -100,7 +100,7 @@ function setup() {
 
   // Set Image Download button
   greeting = createDiv(
-    "<h2 id=rightSide>이 버튼을 눌러 다른 이름으로 저장</h2>"
+    "<h2 id=titleSide>이 버튼을 눌러 다른 이름으로 저장</h2>"
   );
   greeting.class("middleTitleSaveAs");
   savebutton = createButton("만들기");

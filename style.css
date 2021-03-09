@@ -40,7 +40,7 @@ canvas {
   box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
-#rightSide {
+#titleSide {
   padding: 10px;
 }
 
@@ -113,6 +113,7 @@ input {
   font-size: 30px;
   padding: 0 0 0 130px;
   border-radius: 20px 20px 0 0;
+  border: 1px solid rgb(124, 124, 124);
 }
 
 .fontSizeHandle {
@@ -127,7 +128,9 @@ input {
 }
 .textSizeSlider {
   width: 400px;
+  cursor: grab;
 }
+
 .midTitleColor {
   padding: 0 0 0 190px;
 }
@@ -147,6 +150,7 @@ select {
   font-size: 30px;
   padding: 30px;
   border-radius: 0 0 20px 20px;
+  cursor: pointer;
 }
 
 .middleTitleSaveAs {
@@ -159,6 +163,7 @@ select {
   font-size: 20px;
   padding: 0px 20px 70px 50px;
   border-radius: 25px;
+  border: 1px solid rgb(124, 124, 124);
   margin-bottom: 60px;
 }
 
@@ -204,4 +209,10 @@ button {
   font-family: "SDSamliphopangche_Outline";
   font-weight: normal;
   font-style: normal;
+  opacity: 0.7;
+}
+.imageUploadButton,
+button:hover {
+  opacity: 1;
+  cursor: pointer;
 }
