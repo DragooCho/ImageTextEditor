@@ -38,10 +38,10 @@ https://funfunboycho.github.io/ImageTextSynthesisApp/
 
 <br />
 
-![Image Text Editor](https://github.com/DragooCho/TIL/blob/main/image/cap1.gif?raw=true)        
-![Image Text Editor](https://github.com/DragooCho/TIL/blob/main/image/cap3.gif?raw=true)        
-![Image Text Editor](https://github.com/DragooCho/TIL/blob/main/image/cap4.gif?raw=true)        
-![Image Text Editor](https://github.com/DragooCho/TIL/blob/main/image/cap5.gif?raw=true)        
+![Image Text Editor](https://github.com/DragooCho/TIL/blob/main/image/cap1r.gif?raw=true)        
+![Image Text Editor](https://github.com/DragooCho/TIL/blob/main/image/cap3r.gif?raw=true)        
+![Image Text Editor](https://github.com/DragooCho/TIL/blob/main/image/cap4r.gif?raw=true)        
+![Image Text Editor](https://github.com/DragooCho/TIL/blob/main/image/cap5r.gif?raw=true)        
 
 
 <br />
