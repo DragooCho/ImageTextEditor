@@ -52,7 +52,8 @@ https://funfunboycho.github.io/ImageTextSynthesisApp/
 <details>
 <summary>p5.js 온라인 에디터에 있던 script 테그가 로컬에서 읽히지 않았던 점입니다.</summary>
 
-    [p5.js - Libraries - cdnjs](https://cdnjs.com/libraries/p5.js)에서 최신버전으로 교체했더니 잘 동작했다.
+[p5.js - Libraries - cdnjs](https://cdnjs.com/libraries/p5.js)에서 최신버전으로 교체했더니 잘 동작했다.
+
 </div>
 </details>
 
@@ -66,7 +67,7 @@ https://funfunboycho.github.io/ImageTextSynthesisApp/
   스타일링하기에는 너무나 까다롭고 손을 못되는 것도 생각보다 많았다. 
   
 - 다음에 비슷한 과제를 만들 때는 피5를 배제하던지 아님 순수JS와 
-  조화롭게 쓸 수 있는지 알아본후 써먹야갰다고 결론
+  조화롭게 쓸 수 있는지 알아본 후 써먹야갰다고 결론
 
 
 ## ver.2 변경점
