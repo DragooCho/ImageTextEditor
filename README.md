@@ -67,7 +67,7 @@
 <br />
 
 ## DEMO
-https://dragoocho.github.io/canvasWorkImage/
+https://dragoocho.github.io/ImageTextEditor/
 
 <br />
 
