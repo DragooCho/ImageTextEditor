@@ -46,13 +46,13 @@ https://funfunboycho.github.io/ImageTextSynthesisApp/
 
 ## 3. 구현하면서 힘들었던 점
 - 리액트JS 내에서 P5.js 라이브러리의 메서드 활용이 제한적이고 불편 했었습니다.
-- 결국에는 javascript 기준으로 p5.js의 라이브러리만 쓰기로 결정했습니다.. 스스로 이해가 가능한 기능구현이 목적이였기 때문에....
-- 
+- 결국에는 javascript 기준으로 p5.js의 라이브러리만 쓰기로 결정했습니다..   
+스스로 이해가 가능한 기능구현이 목적이였기 때문에....
 </div>
 <details>
 <summary>p5.js 온라인 에디터에 있던 script 테그가 로컬에서 읽히지 않았던 점입니다.</summary>
 
-[p5.js - Libraries - cdnjs](https://cdnjs.com/libraries/p5.js)에서 최신버전으로 교체했더니 잘 동작했다.
+[p5.js - Libraries - cdnjs](https://cdnjs.com/libraries/p5.js)에서 최신버전으로 교체했더니 잘 동작했습니다.
 
 </div>
 </details>
@@ -64,10 +64,10 @@ https://funfunboycho.github.io/ImageTextSynthesisApp/
 - p5.js 에서는 HTML에 직접 만드는게 아닌 p5 자체 메서드로 id와 class를    
   직접 생성해야하기 때문에 노드들끼리 서로 묶을수가 없어서 css 를 적용하기가 너무나 어려웠습니다.  
   결론적으로 p5.js의 기능자체는 구현하기 쉬우나 그렇게 생성된 노드들을 
-  스타일링하기에는 너무나 까다롭고 손을 못되는 것도 생각보다 많았다. 
+  스타일링하기에는 너무나 까다롭고 손을 못되는 것도 생각보다 많았습니다. 
   
 - 다음에 비슷한 과제를 만들 때는 피5를 배제하던지 아님 순수JS와 
-  조화롭게 쓸 수 있는지 알아본 후 써먹야갰다고 결론
+  조화롭게 쓸 수 있는지 알아본 후 이용하기로 결론지었습니다.
 
 <br />
 
