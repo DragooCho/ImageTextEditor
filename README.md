@@ -67,7 +67,7 @@
 <br />
 
 ## DEMO
-https://funfunboycho.github.io/ImageTextSynthesisApp/
+https://dragoocho.github.io/canvasWorkImage/
 
 <br />
 
