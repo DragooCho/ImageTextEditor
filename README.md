@@ -69,6 +69,7 @@ https://funfunboycho.github.io/ImageTextSynthesisApp/
 - 다음에 비슷한 과제를 만들 때는 피5를 배제하던지 아님 순수JS와 
   조화롭게 쓸 수 있는지 알아본 후 써먹야갰다고 결론
 
+<br />
 
 ## ver.2 변경점
 
