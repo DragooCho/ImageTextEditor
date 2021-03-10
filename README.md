@@ -1,4 +1,4 @@
-# Image Text Editor 웹툴
+# Image Text Editor 웹툴 [![HitCount](http://hits.dwyl.com/dragoocho/DragooCho/ImageTextEditor.svg)](http://hits.dwyl.com/dragoocho/DragooCho/ImageTextEditor)
 >온라인 웹사이트에서 쉽게 볼 수있는 재미있는 짤방을     
 누구나 쉽게 만들 수 있는 웹페이지 형식의 어플리케이션으로 제작했습니다.         
 
