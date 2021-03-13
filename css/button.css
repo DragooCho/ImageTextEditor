@@ -1,0 +1,39 @@
+button {
+  color: rgb(214, 214, 214);
+  font-size: 24px;
+  padding: 16px;
+  text-shadow: 0px 3px 0px rgba(37, 0, 0, 0.62);
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  border-radius: 65px;
+  background: rgb(67, 20, 237);
+  background: linear-gradient(
+    0deg,
+    rgb(67, 20, 237) 30%,
+    rgb(74, 133, 255) 77%
+  );
+  box-shadow: 0px 9px 6px rgba(50, 50, 50, 0.91);
+  margin-top: -130px;
+  font-family: "SDSamliphopangche_Outline";
+  font-weight: normal;
+  font-style: normal;
+  opacity: 0.7;
+}
+
+.imageUploadButton {
+  width: 500px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.445);
+  text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+  font-family: "SDSamliphopangche_Outline";
+  font-weight: normal;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+}
+
+.imageUploadButton,
+button:hover {
+  opacity: 1;
+  cursor: pointer;
+}

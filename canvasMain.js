@@ -1,13 +1,4 @@
-let img,
-  input,
-  textInput,
-  button,
-  savebutton,
-  textSizeSlider,
-  dropdown,
-  greeting,
-  sizeGreeting,
-  bigTitleGreeting;
+let img, input, button;
 
 function preload() {
   MaplestoryOTFBold = loadFont(
@@ -132,6 +123,10 @@ function draw() {
   text(inputWindowText, mouseX, mouseY);
 }
 
+function myInputEvent() {
+  loop();
+}
+
 function textSizeChange() {
   const sizeChange = textSizeSlider.value();
   sizeGreeting.html("폰트 사이즈 " + sizeChange);
@@ -140,10 +135,6 @@ function textSizeChange() {
 
 function gotFile(file) {
   img = createImg(file.data, "").hide();
-  loop();
-}
-
-function myInputEvent() {
   loop();
 }
 

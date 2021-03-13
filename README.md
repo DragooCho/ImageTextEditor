@@ -42,7 +42,7 @@
  
 </div>
 <details>
-<summary>`p5.js` 온라인 에디터에 있던 script 테그가 로컬에서 읽히지 않았던 점입니다.</summary>
+<summary> `p5.js` 온라인 에디터에 있던 script 테그가 로컬에서 읽히지 않았던 점입니다.</summary>
 
     [p5.js - Libraries - cdnjs](https://cdnjs.com/libraries/p5.js)에서 최신버전으로 교체했더니 잘 동작했습니다.
 </div>
