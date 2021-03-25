@@ -135,6 +135,7 @@ function textSizeChange() {
 
 function gotFile(file) {
   img = createImg(file.data, "").hide();
+  img.hide();
   loop();
 }
 
